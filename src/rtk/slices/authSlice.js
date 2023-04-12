@@ -2,7 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 export const postData = createAsyncThunk("postData", async (data, thunkAPI) => {
-  const response = await axios.post("api/auth/login", data);
+  const response = await axios.post(
+    "https://whats-server.onrender.com/api/auth/login",
+    data
+  );
 
   return response.data;
 });
