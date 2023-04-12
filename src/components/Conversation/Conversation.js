@@ -11,7 +11,9 @@ function Conversation({ conversation, currentUser, convId }) {
 
     const getUser = async () => {
       try {
-        const res = await axios("/api/users?userId=" + friendId);
+        const res = await axios(
+          "https://whats-server.onrender.com/api/users?userId=" + friendId
+        );
         setUser(res.data);
         localStorage.setItem("chatconv", JSON.stringify(res.data));
       } catch (err) {
