@@ -21,7 +21,10 @@ function Register() {
       password,
       confirmPassword: password,
     };
-    const res = await axios.post("/api/auth/register", data);
+    const res = await axios.post(
+      "https://whats-server.onrender.com/api/auth/register",
+      data
+    );
     try {
       localStorage.setItem("chatuser", JSON.stringify(res.data));
       if (res.status === 200) {
