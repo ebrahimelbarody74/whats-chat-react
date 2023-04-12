@@ -1,0 +1,100 @@
+.navbar{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    .n-left{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        .search{
+            display: flex;
+            background-color: var(--inputColor);
+            border-radius: 10px;
+            padding: 5px;
+            input{
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+            svg{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(106.23deg, #f99827 0%, #f95f35 100%);
+                border-radius: 5px;
+                padding: 4px;
+                color: white;
+            }
+        }
+        .userSearch{
+            position: absolute;
+            top: 100%;
+            background-color: #fff;
+            z-index: 100;
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px;
+            ul{
+                list-style: none;
+                padding: 0;
+                width: 100%;
+                li{
+                    width: 100%;
+                    padding: 10px 5px;
+                    border-radius: 10px;
+                    transition: .1s ease-in-out;
+                    display: flex;
+                    justify-content: space-between;
+                    &:hover{
+                        background: #80808038;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .n-right{
+        display: flex;
+        gap: 7rem;
+        align-items: center;
+        
+        svg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(106.23deg, #f99827 0%, #f95f35 100%);
+            border-radius: 5px;
+            padding: 4px;
+            color: white;
+        }
+        img{
+            width: 30px;
+        }
+    }
+}
+
+@media(max-width:800px){
+    .navbar{
+        .n-right{
+            position: absolute;
+            right: 20px;
+            flex-direction: column;
+            gap: .5rem;
+            a:not(:nth-child(1)){
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width:400px){
+    .navbar{
+        padding: 0 10px;
+        .n-left{
+            img{
+                width: 30px;
+            }
+        }
+    }
+}

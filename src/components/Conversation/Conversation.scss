@@ -1,0 +1,20 @@
+@media(max-width:767px){
+    .chat{
+        .chat-left{
+            padding: .2rem;
+            h2{
+                font-size: 20px;
+                margin: .2rem;
+            }
+            .chat-list{
+
+                flex-direction: column;
+                gap: .2rem;
+                padding: 10px 0;
+                .info{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
