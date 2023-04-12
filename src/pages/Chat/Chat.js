@@ -27,7 +27,9 @@ function Chat() {
   useEffect(() => {
     const getConversations = async () => {
       try {
-        const res = await axios.get("https://whats-server.onrender.com/api/conversations/" + user._id);
+        const res = await axios.get(
+          "https://whats-server.onrender.com/api/conversations/" + user._id
+        );
         setConversations(res.data);
       } catch (err) {
         console.log(err);
@@ -69,7 +71,9 @@ function Chat() {
   useEffect(() => {
     const getMessages = async () => {
       try {
-        const res = await axios.get("https://whats-server.onrender.com/api/messages/" + currentChat._id);
+        const res = await axios.get(
+          "https://whats-server.onrender.com/api/messages/" + currentChat._id
+        );
         setMessages(res.data);
       } catch (err) {
         console.log(err);
@@ -97,7 +101,10 @@ function Chat() {
     });
 
     try {
-      const res = await axios.post("/api/messages", message);
+      const res = await axios.post(
+        "https://whats-server.onrender.com/api/messages",
+        message
+      );
       setMessages([...messages, res.data]);
       setNewMessage("");
     } catch (err) {
@@ -115,7 +122,9 @@ function Chat() {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("https://whats-server.onrender.com/api/users/username");
+        const res = await axios.get(
+          "https://whats-server.onrender.com/api/users/username"
+        );
         setUsers(res.data);
       } catch (err) {
         console.log(err);
@@ -154,7 +163,10 @@ function Chat() {
     };
     if (!check && e._id !== null) {
       try {
-        const res = await axios.post("https://whats-server.onrender.com/api/conversations/", data);
+        const res = await axios.post(
+          "https://whats-server.onrender.com/api/conversations/",
+          data
+        );
         console.log(res);
       } catch (err) {
         console.log(err);
@@ -170,7 +182,9 @@ function Chat() {
 
     const getUser = async () => {
       try {
-        const res = await axios("https://whats-server.onrender.com/api/users?userId=" + friendId);
+        const res = await axios(
+          "https://whats-server.onrender.com/api/users?userId=" + friendId
+        );
         setConvChat(res.data);
       } catch (err) {
         console.log(err);
