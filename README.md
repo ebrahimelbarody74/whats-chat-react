@@ -1,5 +1,4 @@
-website :
-orico-app.netlify.app
+https://orico-chat.netlify.app/
 
 
 # Getting Started with Create React App
